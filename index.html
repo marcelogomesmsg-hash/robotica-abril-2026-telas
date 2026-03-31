@@ -19,37 +19,33 @@
         .gradient-text { background: linear-gradient(90deg, #22d3ee, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .bg-tech-grid { background-image: radial-gradient(#1e293b 1px, transparent 1px); background-size: 30px 30px; }
         .border-glow { border: 1px solid rgba(34, 211, 238, 0.3); box-shadow: 0 0 15px rgba(34, 211, 238, 0.1); }
-@media (max-width: 480px) {
-  .min-h-screen {
-    min-height: auto !important;
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-  }
-  h1 {
-    font-size: 2rem !important;
-    margin-bottom: 0.75rem !important;
-  }
-  .mb-6 { margin-bottom: 0.5rem !important; }
-  .mb-10 { margin-bottom: 0.75rem !important; }
-  .py-20 {
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
-  }
-  .formkit-form[data-uid="8fea4a6367"] {
-    min-width: 0 !important;
-    width: 100% !important;
-  }
-  .formkit-form[data-uid="8fea4a6367"] .formkit-fields {
-    flex-direction: column !important;
-  }
-  .formkit-form[data-uid="8fea4a6367"] [data-style="clean"] {
-    padding: 0 !important;
-  }
-  .formkit-submit > span {
-    padding: 8px 16px !important;
-    font-size: 13px !important;
-  }
-}
+
+        /* Mobile */
+        @media (max-width: 767px) {
+          .hero-section {
+            min-height: auto !important;
+            padding-top: 2rem !important;
+            padding-bottom: 2rem !important;
+          }
+          .hero-grid { display: block !important; }
+          .hero-image { display: none !important; }
+          h1 { font-size: 2rem !important; margin-bottom: 0.75rem !important; }
+          .mb-6 { margin-bottom: 0.5rem !important; }
+          .mb-10 { margin-bottom: 0.75rem !important; }
+          .formkit-form[data-uid="8fea4a6367"] { min-width: 0 !important; width: 100% !important; }
+          .formkit-form[data-uid="8fea4a6367"] .formkit-fields { flex-direction: column !important; }
+          .formkit-form[data-uid="8fea4a6367"] [data-style="clean"] { padding: 0 !important; }
+          .formkit-submit > span { padding: 8px 16px !important; font-size: 13px !important; }
+        }
+
+        /* Desktop */
+        @media (min-width: 768px) {
+          .hero-section { min-height: 100vh; }
+          .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+          .formkit-form[data-uid="8fea4a6367"] { min-width: 0 !important; width: 100% !important; }
+          .formkit-form[data-uid="8fea4a6367"] .formkit-fields { flex-direction: column !important; }
+          .formkit-form[data-uid="8fea4a6367"] [data-style="clean"] { padding: 0 !important; }
+        }
     </style>
 </head>
 <body class="bg-tech-grid">
@@ -59,28 +55,49 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- HERO SECTION -->
-    <section class="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
+    <section class="hero-section relative flex items-center px-6 py-12 overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-cyan-500/10 to-transparent pointer-events-none"></div>
-        
-        <div class="max-w-4xl w-full text-center z-10">
-            <span class="inline-block px-4 py-1 border border-cyan-500 text-cyan-400 font-bold text-xs uppercase tracking-widest rounded-full mb-6">
-                Evento 100% Gratuito e Ao Vivo
-            </span>
-            
-            <h1 class="text-4xl md:text-7xl font-black mb-6 leading-tight">
-                Seu filho nas telas o dia todo? <br>
-                <span class="gradient-text uppercase">A Robótica resolve isso.</span>
-            </h1>
-            
-            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
-                Pais e professores sem nenhuma experiência já fizeram isso — e você vai ver ao vivo como funciona.
-            </p>
 
-            <!-- FORMULÁRIO KIT INTEGRADO -->
-            <div class="max-w-md mx-auto bg-slate-900/80 p-6 rounded-2xl border-glow backdrop-blur-sm">
-                <p class="text-sm text-cyan-400 mb-4 font-bold">Garanta sua vaga gratuita:</p>
-                <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
-                <form action="https://app.kit.com/forms/9270360/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9270360" data-uid="8fea4a6367" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;redirect&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;https://robotechforall.com/obrigado.html&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800"><div data-style="clean"><ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul><div data-element="fields" data-stacked="false" class="seva-fields formkit-fields"><div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Digite seu email" placeholder="Digite seu email" required="" type="email" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400;"></div><div class="formkit-field"><input class="formkit-input" aria-label="Digite seu whatsapp" name="fields[null]" placeholder="Digite seu whatsapp" type="text" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400;"></div><button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(255, 255, 255); background-color: rgb(255, 17, 17); border-radius: 4px; font-weight: 400;"><div class="formkit-spinner"><div></div><div></div><div></div></div><span class="">Quero garantir minha vaga</span></button></div><div class="formkit-powered-by-convertkit-container"><a href="https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic" data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="dark" target="_blank" rel="nofollow">Built with Kit</a></div></div><style>.formkit-form[data-uid="8fea4a6367"] *{box-sizing:border-box;}.formkit-form[data-uid="8fea4a6367"]{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}.formkit-form[data-uid="8fea4a6367"] .list-item{padding-left:0;}.formkit-form[data-uid="8fea4a6367"][data-format="modal"]{display:none;}.formkit-form[data-uid="8fea4a6367"][data-format="slide in"]{display:none;}.formkit-form[data-uid="8fea4a6367"][data-format="sticky bar"]{display:none;}.formkit-sticky-bar .formkit-form[data-uid="8fea4a6367"][data-format="sticky bar"]{display:block;}.formkit-form[data-uid="8fea4a6367"] .formkit-input,.formkit-form[data-uid="8fea4a6367"] .formkit-select,.formkit-form[data-uid="8fea4a6367"] .formkit-checkboxes{width:100%;}.formkit-form[data-uid="8fea4a6367"] .formkit-button,.formkit-form[data-uid="8fea4a6367"] .formkit-submit{border:0;border-radius:5px;color:#ffffff;cursor:pointer;display:inline-block;text-align:center;font-size:15px;font-weight:500;margin-bottom:15px;overflow:hidden;padding:0;position:relative;vertical-align:middle;}.formkit-form[data-uid="8fea4a6367"] .formkit-button > span,.formkit-form[data-uid="8fea4a6367"] .formkit-submit > span{display:block;-webkit-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out;padding:12px 24px;}.formkit-form[data-uid="8fea4a6367"] .formkit-input{background:#ffffff;font-size:15px;padding:12px;border:1px solid #e3e3e3;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;line-height:1.4;margin:0;-webkit-transition:border-color ease-out 300ms;transition:border-color ease-out 300ms;}.formkit-form[data-uid="8fea4a6367"] .formkit-input:focus{outline:none;border-color:#1677be;}.formkit-form[data-uid="8fea4a6367"] .formkit-input::placeholder{color:inherit;opacity:0.8;}.formkit-form[data-uid="8fea4a6367"] .formkit-alert{background:#f9fafb;border:1px solid #e3e3e3;border-radius:5px;flex:1 0 auto;list-style:none;margin:25px auto;padding:12px;text-align:center;width:100%;}.formkit-form[data-uid="8fea4a6367"] .formkit-alert:empty{display:none;}.formkit-form[data-uid="8fea4a6367"] .formkit-alert-success{background:#d3fbeb;border-color:#10bf7a;color:#0c905c;}.formkit-form[data-uid="8fea4a6367"] .formkit-alert-error{background:#fde8e2;border-color:#f2643b;color:#ea4110;}.formkit-form[data-uid="8fea4a6367"] .formkit-spinner{display:flex;height:0px;width:0px;margin:0 auto;position:absolute;top:0;left:0;right:0;overflow:hidden;text-align:center;-webkit-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out;}.formkit-form[data-uid="8fea4a6367"] .formkit-spinner > div{margin:auto;width:12px;height:12px;background-color:#fff;opacity:0.3;border-radius:100%;display:inline-block;-webkit-animation:formkit-bouncedelay-formkit-form-data-uid-8fea4a6367- 1.4s infinite ease-in-out both;animation:formkit-bouncedelay-formkit-form-data-uid-8fea4a6367- 1.4s infinite ease-in-out both;}.formkit-form[data-uid="8fea4a6367"] .formkit-spinner > div:nth-child(1){-webkit-animation-delay:-0.32s;animation-delay:-0.32s;}.formkit-form[data-uid="8fea4a6367"] .formkit-spinner > div:nth-child(2){-webkit-animation-delay:-0.16s;animation-delay:-0.16s;}.formkit-form[data-uid="8fea4a6367"] .formkit-submit[data-active] .formkit-spinner{opacity:1;height:100%;width:50px;}.formkit-form[data-uid="8fea4a6367"] .formkit-submit[data-active] .formkit-spinner ~ span{opacity:0;}.formkit-form[data-uid="8fea4a6367"] .formkit-powered-by-convertkit-container{display:flex;width:100%;margin:10px 0;position:relative;}.formkit-form[data-uid="8fea4a6367"] .formkit-powered-by-convertkit{align-items:center;background-color:#ffffff;border-radius:9px;color:#3d3d3d;cursor:pointer;display:block;height:36px;margin:0 auto;opacity:0.95;padding:0;text-decoration:none;text-indent:100%;transition:ease-in-out all 200ms;white-space:nowrap;overflow:hidden;user-select:none;width:157px;background-repeat:no-repeat;background-position:center;}.formkit-form[data-uid="8fea4a6367"]{max-width:700px;}.formkit-form[data-uid="8fea4a6367"] [data-style="clean"]{width:100%;}.formkit-form[data-uid="8fea4a6367"] .formkit-fields{display:flex;flex-wrap:wrap;margin:0 auto;}.formkit-form[data-uid="8fea4a6367"] .formkit-field,.formkit-form[data-uid="8fea4a6367"] .formkit-submit{margin:0 0 15px 0;flex:1 0 100%;}.formkit-form[data-uid="8fea4a6367"] .formkit-powered-by-convertkit-container{margin:0;}.formkit-form[data-uid="8fea4a6367"] .formkit-submit{position:static;}@-webkit-keyframes formkit-bouncedelay-formkit-form-data-uid-8fea4a6367-{0%,80%,100%{-webkit-transform:scale(0);transform:scale(0);}40%{-webkit-transform:scale(1);transform:scale(1);}}@keyframes formkit-bouncedelay-formkit-form-data-uid-8fea4a6367-{0%,80%,100%{-webkit-transform:scale(0);transform:scale(0);}40%{-webkit-transform:scale(1);transform:scale(1);}}</style></form>
+        <div class="max-w-6xl w-full mx-auto z-10">
+            <div class="hero-grid">
+
+                <!-- COLUNA ESQUERDA: texto + form -->
+                <div>
+                    <span class="inline-block px-4 py-1 border border-cyan-500 text-cyan-400 font-bold text-xs uppercase tracking-widest rounded-full mb-5">
+                        Evento 100% Gratuito e Ao Vivo
+                    </span>
+
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 leading-tight">
+                        Seu filho nas telas o dia todo? <br>
+                        <span class="gradient-text uppercase">A Robótica resolve isso.</span>
+                    </h1>
+
+                    <p class="text-base text-gray-400 mb-6 max-w-lg">
+                        Pais e professores sem nenhuma experiência já fizeram isso — e você vai ver ao vivo como funciona.
+                    </p>
+
+                    <!-- FORMULÁRIO -->
+                    <div class="bg-slate-900/80 p-5 rounded-2xl border-glow backdrop-blur-sm">
+                        <p class="text-sm text-cyan-400 mb-3 font-bold">Garanta sua vaga gratuita:</p>
+                        <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+                        <form action="https://app.kit.com/forms/9270360/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9270360" data-uid="8fea4a6367" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;redirect&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;https://robotechforall.com/obrigado.html&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800"><div data-style="clean"><ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul><div data-element="fields" data-stacked="false" class="seva-fields formkit-fields"><div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Digite seu email" placeholder="Digite seu email" required="" type="email" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400;"></div><div class="formkit-field"><input class="formkit-input" aria-label="Digite seu whatsapp" name="fields[null]" placeholder="Digite seu whatsapp" type="text" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400;"></div><button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(255, 255, 255); background-color: rgb(255, 17, 17); border-radius: 4px; font-weight: 400;"><div class="formkit-spinner"><div></div><div></div><div></div></div><span class="">Quero garantir minha vaga</span></button></div><div class="formkit-powered-by-convertkit-container"><a href="https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic" data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="dark" target="_blank" rel="nofollow">Built with Kit</a></div></div><style>.formkit-form[data-uid="8fea4a6367"] *{box-sizing:border-box;}.formkit-form[data-uid="8fea4a6367"]{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}.formkit-form[data-uid="8fea4a6367"] .list-item{padding-left:0;}.formkit-form[data-uid="8fea4a6367"][data-format="modal"]{display:none;}.formkit-form[data-uid="8fea4a6367"][data-format="slide in"]{display:none;}.formkit-form[data-uid="8fea4a6367"][data-format="sticky bar"]{display:none;}.formkit-sticky-bar .formkit-form[data-uid="8fea4a6367"][data-format="sticky bar"]{display:block;}.formkit-form[data-uid="8fea4a6367"] .formkit-input,.formkit-form[data-uid="8fea4a6367"] .formkit-select,.formkit-form[data-uid="8fea4a6367"] .formkit-checkboxes{width:100%;}.formkit-form[data-uid="8fea4a6367"] .formkit-button,.formkit-form[data-uid="8fea4a6367"] .formkit-submit{border:0;border-radius:5px;color:#ffffff;cursor:pointer;display:inline-block;text-align:center;font-size:15px;font-weight:500;margin-bottom:15px;overflow:hidden;padding:0;position:relative;vertical-align:middle;}.formkit-form[data-uid="8fea4a6367"] .formkit-button > span,.formkit-form[data-uid="8fea4a6367"] .formkit-submit > span{display:block;-webkit-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out;padding:12px 24px;}.formkit-form[data-uid="8fea4a6367"] .formkit-input{background:#ffffff;font-size:15px;padding:12px;border:1px solid #e3e3e3;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;line-height:1.4;margin:0;-webkit-transition:border-color ease-out 300ms;transition:border-color ease-out 300ms;}.formkit-form[data-uid="8fea4a6367"] .formkit-input:focus{outline:none;border-color:#1677be;}.formkit-form[data-uid="8fea4a6367"] .formkit-input::placeholder{color:inherit;opacity:0.8;}.formkit-form[data-uid="8fea4a6367"] .formkit-alert{background:#f9fafb;border:1px solid #e3e3e3;border-radius:5px;flex:1 0 auto;list-style:none;margin:25px auto;padding:12px;text-align:center;width:100%;}.formkit-form[data-uid="8fea4a6367"] .formkit-alert:empty{display:none;}.formkit-form[data-uid="8fea4a6367"] .formkit-alert-success{background:#d3fbeb;border-color:#10bf7a;color:#0c905c;}.formkit-form[data-uid="8fea4a6367"] .formkit-alert-error{background:#fde8e2;border-color:#f2643b;color:#ea4110;}.formkit-form[data-uid="8fea4a6367"] .formkit-spinner{display:flex;height:0px;width:0px;margin:0 auto;position:absolute;top:0;left:0;right:0;overflow:hidden;text-align:center;-webkit-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out;}.formkit-form[data-uid="8fea4a6367"] .formkit-spinner > div{margin:auto;width:12px;height:12px;background-color:#fff;opacity:0.3;border-radius:100%;display:inline-block;-webkit-animation:formkit-bouncedelay-formkit-form-data-uid-8fea4a6367- 1.4s infinite ease-in-out both;animation:formkit-bouncedelay-formkit-form-data-uid-8fea4a6367- 1.4s infinite ease-in-out both;}.formkit-form[data-uid="8fea4a6367"] .formkit-spinner > div:nth-child(1){-webkit-animation-delay:-0.32s;animation-delay:-0.32s;}.formkit-form[data-uid="8fea4a6367"] .formkit-spinner > div:nth-child(2){-webkit-animation-delay:-0.16s;animation-delay:-0.16s;}.formkit-form[data-uid="8fea4a6367"] .formkit-submit[data-active] .formkit-spinner{opacity:1;height:100%;width:50px;}.formkit-form[data-uid="8fea4a6367"] .formkit-submit[data-active] .formkit-spinner ~ span{opacity:0;}.formkit-form[data-uid="8fea4a6367"] .formkit-powered-by-convertkit-container{display:flex;width:100%;margin:10px 0;position:relative;}.formkit-form[data-uid="8fea4a6367"] .formkit-powered-by-convertkit{align-items:center;background-color:#ffffff;border-radius:9px;color:#3d3d3d;cursor:pointer;display:block;height:36px;margin:0 auto;opacity:0.95;padding:0;text-decoration:none;text-indent:100%;transition:ease-in-out all 200ms;white-space:nowrap;overflow:hidden;user-select:none;width:157px;background-repeat:no-repeat;background-position:center;}.formkit-form[data-uid="8fea4a6367"]{max-width:700px;}.formkit-form[data-uid="8fea4a6367"] [data-style="clean"]{width:100%;}.formkit-form[data-uid="8fea4a6367"] .formkit-fields{display:flex;flex-wrap:wrap;margin:0 auto;}.formkit-form[data-uid="8fea4a6367"] .formkit-field,.formkit-form[data-uid="8fea4a6367"] .formkit-submit{margin:0 0 15px 0;flex:1 0 100%;}.formkit-form[data-uid="8fea4a6367"] .formkit-powered-by-convertkit-container{margin:0;}.formkit-form[data-uid="8fea4a6367"] .formkit-submit{position:static;}@-webkit-keyframes formkit-bouncedelay-formkit-form-data-uid-8fea4a6367-{0%,80%,100%{-webkit-transform:scale(0);transform:scale(0);}40%{-webkit-transform:scale(1);transform:scale(1);}}@keyframes formkit-bouncedelay-formkit-form-data-uid-8fea4a6367-{0%,80%,100%{-webkit-transform:scale(0);transform:scale(0);}40%{-webkit-transform:scale(1);transform:scale(1);}}</style></form>
+                    </div>
+                </div>
+
+                <!-- COLUNA DIREITA: imagem -->
+                <div class="hero-image flex items-center justify-center">
+                    <div class="relative w-full max-w-lg">
+                        <div class="absolute inset-0 bg-cyan-500/20 rounded-3xl blur-3xl"></div>
+                        <img
+                            src="https://images.unsplash.com/photo-1743495851178-56ace672e545?q=80&w=800&auto=format&fit=crop"
+                            alt="Robô seguidor de linha"
+                            class="relative rounded-3xl w-full object-cover shadow-2xl"
+                            style="max-height: 75vh; object-position: center;"
+                        />
+                        <div class="absolute inset-0 rounded-3xl" style="border: 1px solid rgba(34,211,238,0.3);"></div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -110,7 +127,6 @@
             <h2 class="text-3xl md:text-5xl font-bold mb-12 leading-tight">
                 Em vez de assistir, <span class="text-cyan-400">ele constrói.</span>
             </h2>
-            
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="p-8 bg-slate-900 rounded-xl border border-slate-800">
                     <div class="text-4xl mb-4">🛠️</div>
@@ -149,7 +165,6 @@
     <section class="py-20 px-6">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold mb-10 text-center uppercase tracking-widest font-tech text-cyan-400">O que acontece no evento</h2>
-            
             <div class="space-y-6">
                 <div class="flex items-start gap-4 p-6 bg-slate-900/50 rounded-lg border border-slate-800">
                     <span class="bg-cyan-500 text-black font-bold px-3 py-1 rounded">1</span>
@@ -199,13 +214,11 @@
     <script>
       var redirected = false;
       var REDIRECT_URL = 'https://robotechforall.com/obrigado.html';
-
       function doRedirect() {
         if (redirected) return;
         redirected = true;
         window.location.href = REDIRECT_URL;
       }
-
       var observer = new MutationObserver(function(mutations) {
         if (redirected) return;
         mutations.forEach(function(mutation) {
@@ -225,7 +238,6 @@
           });
         });
       });
-
       observer.observe(document.body, { childList: true, subtree: true });
     </script>
 </body>
