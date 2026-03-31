@@ -189,6 +189,14 @@
     <footer class="py-10 text-center text-gray-600 text-xs border-t border-slate-900">
         &copy; 2024 Robótica Educativa - Todos os direitos reservados.
     </footer>
-
+<script>
+  document.addEventListener('submit', function(e) {
+    if (e.target.classList.contains('seva-form')) {
+      setTimeout(function() {
+        window.location.href = 'https://robotechforall.com/obrigado.html';
+      }, 1500);
+    }
+  });
+</script>
 </body>
 </html>
