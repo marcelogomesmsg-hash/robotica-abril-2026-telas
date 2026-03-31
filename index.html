@@ -22,12 +22,8 @@
     font-size: 2rem !important;
     margin-bottom: 0.75rem !important;
   }
-  .mb-6 {
-    margin-bottom: 0.5rem !important;
-  }
-  .mb-10 {
-    margin-bottom: 0.75rem !important;
-  }
+  .mb-6 { margin-bottom: 0.5rem !important; }
+  .mb-10 { margin-bottom: 0.75rem !important; }
   .py-20 {
     padding-top: 1.5rem !important;
     padding-bottom: 1.5rem !important;
@@ -188,33 +184,38 @@
     <footer class="py-10 text-center text-gray-600 text-xs border-t border-slate-900">
         &copy; 2024 Robótica Educativa - Todos os direitos reservados.
     </footer>
-<footer class="py-10 text-center text-gray-600 text-xs border-t border-slate-900">
-        &copy; 2024 Robótica Educativa - Todos os direitos reservados.
-    </footer>
 
-<script>
-  var observer = new MutationObserver(function() {
-    var form = document.querySelector('.formkit-form[data-uid="8fea4a6367"]');
-    if (form && form.style.display === 'none') {
-      window.location.href = 'https://robotechforall.com/obrigado.html';
-    }
-  });
-  observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['style'] });
-</script>
+    <script>
+      var redirected = false;
+      var REDIRECT_URL = 'https://robotechforall.com/obrigado.html';
+
+      function doRedirect() {
+        if (redirected) return;
+        redirected = true;
+        window.location.href = REDIRECT_URL;
+      }
+
+      var observer = new MutationObserver(function(mutations) {
+        if (redirected) return;
+        mutations.forEach(function(mutation) {
+          mutation.addedNodes.forEach(function(node) {
+            if (node.nodeType !== 1) return;
+            var html = node.outerHTML || '';
+            if (
+              html.indexOf('Thanks for subscribing') !== -1 ||
+              html.indexOf('formkit-network') !== -1 ||
+              html.indexOf('creator-network') !== -1 ||
+              html.indexOf('fellow creators') !== -1 ||
+              node.classList.contains('formkit-overlay') ||
+              node.classList.contains('formkit-modal')
+            ) {
+              doRedirect();
+            }
+          });
+        });
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
+    </script>
 </body>
-</html>
-</body>
-<script>
-  var redirected = false;
-  var observer = new MutationObserver(function() {
-    if (redirected) return;
-    var overlay = document.querySelector('.formkit-overlay, [data-group="modal"], .formkit-modal');
-    if (overlay) {
-      redirected = true;
-      observer.disconnect();
-      window.location.href = 'https://robotechforall.com/obrigado.html';
-    }
-  });
-  observer.observe(document.body, { childList: true, subtree: true });
-</script>
 </html>
